@@ -10,7 +10,7 @@
 
 class MainWindow : public BWindow {
 public:
-    MainWindow();
+    MainWindow(BRect frame);
 
     ~MainWindow() override;
 

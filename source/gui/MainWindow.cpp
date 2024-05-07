@@ -14,8 +14,8 @@
 #define B_TRANSLATION_CONTEXT "MainWindow"
 
 
-MainWindow::MainWindow()
-        : BWindow(BRect(100, 100, 500, 400), B_TRANSLATE_SYSTEM_NAME("Stocks"), B_TITLED_WINDOW,
+MainWindow::MainWindow(BRect frame)
+        : BWindow(frame, B_TRANSLATE_SYSTEM_NAME("Stocks"), B_TITLED_WINDOW,
                   B_ASYNCHRONOUS_CONTROLS),
           fQuoteResultHandler(new QuoteResultHandler()) {
 

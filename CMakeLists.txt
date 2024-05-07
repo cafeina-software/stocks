@@ -67,11 +67,11 @@ configure_file(
 )
 
 # Set the api key from an environment variable
-set(FINANCIAL_API_KEY $ENV{STOCKS_APP_API_KEY})
-configure_file(
-        "source/api/FinancialmodelingApiKey.h.in"
-        "source/api/FinancialmodelingApiKey.h"
-)
+#set(FINANCIAL_API_KEY $ENV{STOCKS_APP_API_KEY})
+#configure_file(
+#        "source/api/FinancialmodelingApiKey.h.in"
+#        "source/api/FinancialmodelingApiKey.h"
+#)
 
 # JSON Parser
 include(FetchContent)
@@ -107,6 +107,7 @@ catch_discover_tests(tests)
 haiku_add_executable(${PROJECT_NAME}
         source/Stocks.rdef
         source/App.cpp
+        source/gui/AddKeyDialogBox.cpp
         source/gui/MainWindow.cpp
         source/gui/Colors.cpp
         source/gui/chartView/DetailsView.cpp
