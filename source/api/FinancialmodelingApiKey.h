@@ -25,7 +25,7 @@ public:
     static void SetApiKey(const char* apikey);
     bool ValidateApiKey();
 private:
-    inline static /*const*/ std::string fApiKey = "@FINANCIAL_API_KEY@";
+    inline static /*const*/ std::string fApiKey;
 };
 
 
